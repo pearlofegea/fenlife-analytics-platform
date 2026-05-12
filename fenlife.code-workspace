@@ -1,0 +1,90 @@
+{
+  "folders": [
+    {
+      "name": "📁 FENlife (root)",
+      "path": "."
+    },
+    {
+      "name": "🐍 Backend (FastAPI)",
+      "path": "./backend"
+    },
+    {
+      "name": "⚛️ Frontend (Next.js)",
+      "path": "./frontend"
+    },
+    {
+      "name": "📄 Docs",
+      "path": "./docs"
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder:🐍 Backend (FastAPI)}/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": ["tests"],
+
+    "[python]": {
+      "editor.defaultFormatter": "charliermarsh.ruff",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll.ruff": "explicit",
+        "source.organizeImports.ruff": "explicit"
+      }
+    },
+
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+
+    "typescript.tsdk": "frontend/node_modules/typescript/lib",
+    "tailwindCSS.experimental.classRegex": [
+      ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+      ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+    ],
+
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/.pytest_cache": true,
+      "**/.ruff_cache": true,
+      "**/node_modules": true,
+      "**/.next": true,
+      "**/.venv": false
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/.next": true,
+      "**/.venv": true,
+      "**/dist": true,
+      "**/__pycache__": true
+    },
+
+    "editor.rulers": [100],
+    "editor.tabSize": 4,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "charliermarsh.ruff",
+      "ms-python.debugpy",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss",
+      "mikestead.dotenv",
+      "eamodio.gitlens",
+      "yzhang.markdown-all-in-one"
+    ]
+  }
+}

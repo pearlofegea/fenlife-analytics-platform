@@ -1,0 +1,40 @@
+# ============ Database ============
+sqlalchemy==2.0.36
+alembic==1.13.3
+psycopg2-binary==2.9.10       # dev; prod'da psycopg2 (no-binary) tercih edilir
+
+# ============ Core FastAPI ============
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+python-multipart==0.0.12  # dosya yükleme için
+pydantic==2.9.2
+pydantic-settings==2.5.2
+
+# ============ PDF parsing ============
+pymupdf==1.24.11          # fitz — PDF parsing ve OCR
+pdfplumber==0.11.4        # yedek — tablo-odaklı PDF'ler için
+
+# ============ Data / ML ============
+pandas==2.2.3
+numpy==2.1.1
+scikit-learn==1.5.2
+
+# ============ Kimlik çözümleme ============
+rapidfuzz==3.10.0
+
+# ============ Rapor üretimi ============
+python-docx==1.1.2        # DOCX üretimi
+matplotlib==3.9.2         # grafikler (rapor içine gömülür)
+
+# ============ LLM narrative ============
+anthropic==0.37.1         # Claude API
+
+# ============ Dev / Test ============
+pytest==8.3.3
+pytest-asyncio==0.24.0
+httpx==0.27.2             # test için async HTTP client
+ruff==0.6.9               # linter + formatter
+
+# ============ Logging / Utils ============
+python-dotenv==1.0.1
+structlog==24.4.0

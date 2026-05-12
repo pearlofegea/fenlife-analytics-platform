@@ -1,0 +1,33 @@
+[project]
+name = "fenlife-backend"
+version = "0.1.0"
+description = "FENlife Analytics FastAPI backend"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv", "__pycache__", ".pytest_cache"]
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "I",   # isort
+  "B",   # flake8-bugbear
+  "C4",  # flake8-comprehensions
+  "UP",  # pyupgrade
+]
+ignore = [
+  "E501",  # line too long (formatter zaten hallediyor)
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
